@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("sql106.infinityfree.com", "if0_39025311", "qZDpfWzRZ3", "if0_39025311_stock1");
+$conn = mysqli_connect("mysql-1b252fb9-project-ae1f.f.aivencloud.com", "avnadmin", "AVNS_GohjIaUDcCU6U-xRf3k", "defaultdb");
 
 if (!$conn) {
   die("DB Connection Failed");
