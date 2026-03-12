@@ -1,6 +1,6 @@
 <?php
 session_start();
-require "db.php";
+//require "db.php";
 
 // Get form data
 $username = $_POST['username'] ?? '';
