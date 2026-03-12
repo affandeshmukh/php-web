@@ -1,0 +1,244 @@
+:root {
+            --primary-blue: #0061ff;
+            --dark-blue: #0046b8;
+            --light-blue: #ebf3ff;
+            --bg-gray: #f8fafc;
+            --text-main: #2d3748;
+            --text-muted: #718096;
+            --white: #ffffff;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+       body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background-color: var(--bg-gray);
+    color: var(--text-main);
+    margin: 0;
+    padding: 15px;
+}
+
+	.layout {
+    display: flex;
+    flex-direction: column; /* Mobile first */
+    gap: 20px;
+}
+
+.footer {
+    margin-top: 40px;
+    padding: 20px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+
+        /* Card Styling */
+        .card { 
+            background: var(--white); 
+            border-radius: 16px; 
+            padding: 24px; 
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0,0,0,0.03);
+            overflow-x: auto; /* Handles table overflow on mobile */
+        }
+
+        /* Sections */
+        .products-container { 
+            flex: 1;
+            border-top: 5px solid var(--primary-blue); 
+        }
+
+        .cart-container {
+            width: 100%;
+            border-top: 5px solid var(--primary-blue); 
+        }
+
+        /* Controls */
+        .button-group { 
+            display: flex; 
+            flex-wrap: wrap; /* Allows wrapping on small screens */
+            gap: 12px; 
+            margin-bottom: 20px;
+        }
+
+        .admin-badge { 
+            background: var(--white); 
+            color: var(--primary-blue); 
+            padding: 8px 18px; 
+            border-radius: 8px; 
+            font-size: 14px; 
+            border: 1px solid var(--primary-blue); 
+            font-weight: 600;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .admin-badge:hover {
+            background: var(--primary-blue);
+            color: white;
+        }
+	.filter-btn {
+ 	   background: var(--light-blue);
+  	  color: var(--primary-blue);
+  	  border: none;
+ 	   padding: 8px 16px;
+ 	   border-radius: 8px;
+ 	   font-weight: 500;
+  	  cursor: pointer;
+	}
+
+	.filter-btn:hover {
+  	   background: #d0e4ff; 
+   }
+
+        input[type="text"]#search { 
+            padding: 12px 16px; 
+            border: 1px solid black; 
+            border-radius: 12px ; 
+            outline: none;
+            transition: border-color 0.2s;          
+            width:200px;
+        }
+
+        input[type="text"]#search:focus {
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(0, 97, 255, 0.1);
+        }
+
+        /* Table Styling */
+        table { 
+            width: 100%; 
+            border-collapse: separate; 
+            border-spacing: 0 8px;
+            min-width: 400px; /* Ensures table doesn't get too squashed */
+        }
+
+        th { 
+            text-transform: uppercase; 
+            letter-spacing: 0.05em; 
+            color: var(--text-muted); 
+            font-size: 11px; 
+            padding: 10px; 
+            text-align: left;
+        }
+
+        td { 
+            padding: 12px 10px; 
+            background: var(--white);
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        /* Quantity Controls */
+        .qty-controls { 
+            display: flex; 
+            align-items: center; 
+            gap: 12px; 
+        }
+
+        .qty-box-blue { 
+            display: flex; 
+            background: var(--light-blue); 
+            border-radius: 8px; 
+            overflow: hidden; 
+        }
+
+        .qty-box-blue button { 
+            background: none; 
+            border: none; 
+            color: var(--primary-blue); 
+            padding: 6px 12px; 
+            cursor: pointer; 
+            font-size: 18px; 
+            font-weight: bold;
+        }
+
+        .qty-box-blue button:hover { 
+            background: var(--primary-blue); color: white; 
+        }
+
+        .remove-btn {
+            background: #fff1f0;
+            color: #ff4d4f;
+            border: none;
+            padding: 6px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .update-btn { 
+            background: var(--primary-blue); 
+            color: white; 
+            border: none; 
+            padding: 12px 24px; 
+            border-radius: 10px; 
+            cursor: pointer; 
+            font-weight: 600;
+            width: 100%; /* Full width button on mobile */
+            margin-top: 15px;
+        }
+
+        .cart-footer {
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 2px dashed #e2e8f0;
+            text-align: right;
+        }
+
+        /* --- DESKTOP VIEW --- */
+        @media (min-width: 992px) {
+            body {
+                flex-direction: row;
+                padding: 30px;
+            }
+
+       .layout {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .cart-container {
+        width: 450px;
+        flex-shrink: 0;
+    }
+
+            .update-btn {
+                width: auto;
+            }
+        }
+
+.footer {
+    background: #0061ff;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 10px;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+.footer a {
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+.product-container {
+    height: 400px; /* Set the height you want */
+    overflow-y: auto; /* Adds scrollbar only when content exceeds height */
+    padding: 10px;
+}
+
+/* Optional: Make the scrollbar look nicer */
+.product-container::-webkit-scrollbar {
+    width: 8px;
+}
+.product-container::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
